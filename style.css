@@ -1,0 +1,346 @@
+/*
+    Design by yepgoryo
+*/
+
+@font-face {
+    font-family: "Domine";
+    src: url('fonts/Domine-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Domine", sans-serif;
+    --main-color: #C7C2F3;
+}
+
+a, a:active, a:visited {
+    color:#000;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.hero__message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hero__message__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    width: 70%;
+}
+
+.hero__silhouette__container {
+    position: relative;
+    z-index: 1;
+    height: 80%;
+    aspect-ratio: 1000 / 1031;
+}
+
+.hero__silhouette {
+    z-index: 0;
+    position: absolute;
+    background: url('img/silhouette.png') no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.hero__silhouette__background {
+    z-index: 0;
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    top: 7.5%;
+    left: 7.5%;
+    border-radius: 35px;
+    background: var(--main-color);
+}
+
+.hero__message__bubble {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.hero__message__bubble__upper {
+    margin-left: 50px;
+    padding: 30px;
+    border: 6px dashed #000;
+    border-radius: 35px;
+    font-size: 1.8rem;
+}
+
+.hero__message__bubble__dash {
+    background: url('img/bubble_dash.svg') no-repeat;
+    background-size: contain;
+    aspect-ratio: 113 / 108;
+    width: 80px;
+    margin: 10px 0 0 40px;
+    align-self: flex-start;
+}
+
+hr {
+    border: 3px solid #000;
+    width: 65%;
+    margin: 0 auto;
+}
+
+main h1 {
+    background: var(--main-color);
+    margin: 150px 0 100px 0;
+    padding: 10px 25px 10px 25px;
+    border-radius: 25px;
+    width: fit-content;
+    font-size: clamp(2.4rem, 4.5vw, 5.5rem);
+}
+
+.main__section__container {
+    width: 80%;
+    margin: 150px auto 150px auto;
+}
+
+main .main__section__container:last-child {
+    margin: 150px auto 0 auto;
+}
+
+.designs__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.design__website__container {
+    position: relative;
+    margin-bottom: 5%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 46%;
+    aspect-ratio: 16 / 9;
+    border: 5px solid #000;
+    cursor: pointer;
+    transition: all 3s ease;
+}
+
+.design__website__container__fade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0000007c;
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
+}
+
+.design__website__container:hover {
+    background-position: bottom left;
+    transform: scale(1.2);
+}
+
+.design__website__container:hover .design__website__container__fade {
+    background: none;
+}
+
+.about__photo__container {
+    position: relative;
+    z-index: 1;
+    height: clamp(215px, 18.2vw, 350px);
+    aspect-ratio: 1000 / 1032;
+}
+
+.about__photo {
+    z-index: 0;
+    position: absolute;
+    background: url('img/avatar.png') no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.about__photo__background {
+    z-index: 0;
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    top: 7.5%;
+    left: 7.5%;
+    border-radius: 35px;
+    background: var(--main-color);
+}
+
+.about__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+.about__container__photo__text {
+    width: 60%;
+}
+
+.about__container__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 0 0;
+    width: 100%;
+}
+
+p {
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+}
+
+.write__letter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.contacts__text__title {
+    font-size: 1rem;
+}
+
+.letter__icon {
+    background-image: url('img/mail_icon_shape.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 331 / 273;
+    width: 200px;
+}
+
+.socials__container {
+    padding: 100px 0 0 0;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.write__socials__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding: 50px 0 50px 0;
+}
+
+.write__socials {
+    padding: 50px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter__text, .socials__text {
+    padding: 50px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.socials__title {
+    font-weight: 600;
+}
+
+.socials__icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    width: 200px;
+}
+
+.contacts__text__title {
+    text-align: left;
+}
+
+footer {
+    width: 100%;
+    background: var(--main-color);
+    text-align: center;
+    padding: 50px 0 50px 0;
+    font-size: clamp(1.3rem, 1.5vw, 1.8rem);
+}
+
+@media screen and (max-width: 1000px) {
+    .hero__message__container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+    }
+
+    .hero__silhouette__container {
+        width: 40%;
+        height: auto;
+    }
+
+    .hero__message__bubble__upper {
+        margin: 0 auto;
+    }
+
+    .hero__message__bubble__dash {
+        margin-left: 70%;
+    }
+
+    .design__website__container {
+        width: 100%;
+    }
+
+    .design__website__container:hover {
+        background-position: top left;
+        transform: none;
+    }
+
+    .about__container {
+        flex-direction: column;
+    }
+
+    .about__container__photo__text {
+        width: 100%;
+    }
+
+    .about__container__text {
+        padding-top: 25px;
+    }
+
+    .write__letter {
+        flex-direction: column;
+    }
+
+    .write__socials__container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    main h1 {
+        margin: 150px auto 100px auto;
+    }
+
+    .contacts__text__title {
+        font-size: 2rem;
+    }
+
+    .design__website__container__fade {
+        display: none;
+    }
+}
